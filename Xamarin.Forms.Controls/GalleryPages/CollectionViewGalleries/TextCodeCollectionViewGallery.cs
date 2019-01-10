@@ -16,7 +16,7 @@
 			var collectionView = new CollectionView
 			{
 				ItemsLayout = itemsLayout,
-				AutomationId = "collectionview"
+				AutomationId = "collectionview",
 				SelectionMode = SelectionMode.Single
 			};
 
