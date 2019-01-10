@@ -2,8 +2,8 @@
 {
 	internal class ObservableCodeCollectionViewGallery : ContentPage
 	{
-		public ObservableCodeCollectionViewGallery(ItemsLayoutOrientation orientation = ItemsLayoutOrientation.Vertical,
-			bool grid = true)
+		public ObservableCodeCollectionViewGallery(ItemsLayoutOrientation orientation = ItemsLayoutOrientation.Vertical, 
+			bool grid = true, int initialItems = 1000)
 		{
 			var layout = new Grid
 			{
@@ -31,8 +31,7 @@
 				ItemTemplate = itemTemplate
 			};
 
-			var generator = new ItemsSourceGenerator(collectionView);
-
+			var generator = new ItemsSourceGenerator(collectionView, initialItems);
 			var remover = new ItemRemover(collectionView);
 			var adder = new ItemAdder(collectionView);
 			var replacer = new ItemReplacer(collectionView);

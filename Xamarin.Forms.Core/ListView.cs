@@ -248,7 +248,6 @@ namespace Xamarin.Forms
 			set { SetValue(VerticalScrollBarVisibilityProperty, value); }
 		}
 
-		[EditorBrowsable(EditorBrowsableState.Never)]
 		public ListViewCachingStrategy CachingStrategy { get; private set; }
 
 		[EditorBrowsable(EditorBrowsableState.Never)]
@@ -506,7 +505,7 @@ namespace Xamarin.Forms
 			if (newValue != null && lv.GroupDisplayBinding != null)
 			{
 				lv.GroupDisplayBinding = null;
-				Debug.WriteLine("GroupHeaderTemplate and GroupDisplayBinding can not be set at the same time, setting GroupDisplayBinding to null");
+				Log.Warning("ListView", "GroupHeaderTemplate and GroupDisplayBinding can not be set at the same time, setting GroupDisplayBinding to null");
 			}
 		}
 
