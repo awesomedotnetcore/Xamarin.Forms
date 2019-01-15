@@ -41,6 +41,7 @@
 		public const string Navigation = "Navigation";
 		public const string Effects = "Effects";
 		public const string CollectionView = "CollectionView";
+		public const string Focus = "Focus";
 		public const string ManualReview = "ManualReview";
 		public const string Performance = "Performance";
 	}
